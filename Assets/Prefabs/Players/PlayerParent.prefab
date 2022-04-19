@@ -645,8 +645,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6841158020163405256}
-  - component: {fileID: -2600305330374102573}
-  - component: {fileID: 1114187746251884471}
+  - component: {fileID: 7393960502432324492}
+  - component: {fileID: 6146032464946182082}
+  - component: {fileID: 4126261460260365168}
+  - component: {fileID: 7439518445856691668}
   m_Layer: 0
   m_Name: PlayerParent
   m_TagString: Player
@@ -674,7 +676,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2600305330374102573
+--- !u!114 &7393960502432324492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841158020163405259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d26c2317bdafe4cb1aa314a1789a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDetector: {fileID: 6146032464946182082}
+  PlayerMovementBehaviour: {fileID: 4126261460260365168}
+--- !u!114 &6146032464946182082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -686,10 +702,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7e501c5a1a5194c9bdb8e2cf10a716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentPrefab: {fileID: 6841158020163405259}
-  Players: []
-  _initializedDesiredObjects: {fileID: 0}
---- !u!65 &1114187746251884471
+  _players:
+  - {fileID: 5903335049407838484}
+  - {fileID: 6369914538197784144}
+  - {fileID: 6105000066651877235}
+  - {fileID: 1282819333341820674}
+  - {fileID: 4211297336274929410}
+--- !u!114 &4126261460260365168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841158020163405259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1992416328182144488dd655fb5c910a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _sidewayForce: 10
+--- !u!65 &7439518445856691668
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -700,5 +733,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

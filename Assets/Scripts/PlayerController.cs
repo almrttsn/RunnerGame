@@ -6,12 +6,10 @@ public class PlayerController : MonoBehaviour
     public PlayerDetector PlayerDetector;
     public PlayerMovementBehaviour PlayerMovementBehaviour;
 
-    public GameObject _currentPlayer;
 
-    public void Start()
+    public void Initialize()
     {
         PlayerDetector.Initialize(this);
-        _currentPlayer = PlayerDetector._initializedDesiredObjects;
         PlayerMovementBehaviour.Initialize(this);
     }
 
