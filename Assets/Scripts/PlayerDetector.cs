@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerDetector : MonoBehaviour
 {
+    [SerializeField] GameObject _parentPrefab;
 
     public List<GameObject> Players = new List<GameObject>();
 
@@ -14,12 +15,16 @@ public class PlayerDetector : MonoBehaviour
     private int _count;
     public void Initialize(PlayerController playerController)
     {
-        for(int i = 0; i <Players.Count; i++)
         {
             _playerController = playerController;
-            var prop = Instantiate(Players[i], new Vector3(0, 0, 0), Quaternion.identity);
+            var prop = Instantiate(_parentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             _initializedDesiredObjects = prop;
-        }        
+        }
+    }
+
+    private void Update()
+    {
+        _parentPrefab.transform.GetChild(2).gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,6 +40,15 @@ public class PlayerDetector : MonoBehaviour
             Debug.Log(_count);
         }
     }
+
+    //private void ChangeThePlayer()
+    //{
+    //    if(_count > 2)
+    //    {
+    //        var a =_parentPrefab.transform.GetChild(3);
+    //        a.gameObject.SetActive(true);
+    //    }
+    //}
 
 
 }
