@@ -25,9 +25,14 @@ public class PlayerDetector : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void Start()
     {
         _parentPrefab.transform.GetChild(2).gameObject.SetActive(true);
+
+    }
+
+    private void Update()
+    {
         ChangeMode();
     }
     private void OnTriggerEnter(Collider other)
@@ -52,6 +57,7 @@ public class PlayerDetector : MonoBehaviour
 
             var _previous = _parentPrefab.transform.GetChild(0);
             _previous.gameObject.SetActive(true);
+
         }
         if (_count == -1)
         {
@@ -64,7 +70,7 @@ public class PlayerDetector : MonoBehaviour
         if (_count == 0)
         {
             var _current = _parentPrefab.transform.GetChild(1);
-            _current.gameObject.SetActive(true);
+            _current.gameObject.SetActive(false);
 
             var _next = _parentPrefab.transform.GetChild(2);
             _next.gameObject.SetActive(true);
@@ -77,7 +83,6 @@ public class PlayerDetector : MonoBehaviour
             var _next = _parentPrefab.transform.GetChild(3);
             _next.gameObject.SetActive(true);
         }
-
         if (_count == 2)
         {
             var _current = _parentPrefab.transform.GetChild(3);
