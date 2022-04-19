@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-    [SerializeField] private PlayerController _playerController;
+    //[SerializeField] private PlayerController _playerController;
 
     [SerializeField] float _speed;
     [SerializeField] float _sidewayForce;
 
     public GameObject _objectToBeMoved;
 
+    private PlayerController _playerController;
+
     private bool _isInitialized;
 
-    public void Initialize()
+    public void Initialize(PlayerController playerController)
     {
+        _playerController = playerController;
         _objectToBeMoved = _playerController._currentPlayer;
         _isInitialized = true;
     }
@@ -24,11 +27,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
         {
             _objectToBeMoved.transform.position += new Vector3(0, 0, _speed) * Time.deltaTime;
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
                 _objectToBeMoved.transform.position += new Vector3(-_sidewayForce, 0, 0) * Time.deltaTime;
             }
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 _objectToBeMoved.transform.position += new Vector3(_sidewayForce, 0, 0) * Time.deltaTime;
             }

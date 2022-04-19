@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,8 +10,10 @@ public class PlayerController : MonoBehaviour
 
     public void Start()
     {
-        PlayerDetector.Initialize();
-        _currentPlayer = PlayerDetector._initializedDesiredObject;
-        PlayerMovementBehaviour.Initialize();
+        PlayerDetector.Initialize(this);
+        _currentPlayer = PlayerDetector._initializedDesiredObjects;
+        PlayerMovementBehaviour.Initialize(this);
     }
+
+    
 }
