@@ -17,7 +17,7 @@ public class PlayerDetector : MonoBehaviour
         for(int i = 0; i <Players.Count; i++)
         {
             _playerController = playerController;
-            var prop = Instantiate(Players[i], new Vector3(0, 1, 0), Quaternion.identity);
+            var prop = Instantiate(Players[i], new Vector3(0, 0, 0), Quaternion.identity);
             _initializedDesiredObjects = prop;
         }        
     }
