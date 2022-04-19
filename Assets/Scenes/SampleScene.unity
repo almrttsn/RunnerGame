@@ -1478,8 +1478,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1126079338}
   - component: {fileID: 1126079337}
+  - component: {fileID: 1126079339}
+  - component: {fileID: 1126079340}
   m_Layer: 0
-  m_Name: PlayerDetector
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1497,15 +1499,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1992416328182144488dd655fb5c910a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerController: {fileID: 1126079340}
   _speed: 1
-  _sidewayForce: 1
-  Players:
-  - {fileID: 2832450769281112467, guid: 0190274075c404a4095b2a00fc32c9f5, type: 3}
-  - {fileID: 645356605610110348, guid: 184f1f557c6777141bcd185ef2ba359a, type: 3}
-  - {fileID: 331219956414138712, guid: 23d623d873e4a4043b0598eb79637cb6, type: 3}
-  - {fileID: 2274334788017788331, guid: e2f7fe544b6d74b45b55b599dca77f1e, type: 3}
-  - {fileID: 3866022827189742412, guid: 92c96cb2737a938479e528daa2f1257d, type: 3}
-  _currentPlayer: {fileID: 0}
+  _sidewayForce: 100
+  _objectToBeMoved: {fileID: 0}
 --- !u!4 &1126079338
 Transform:
   m_ObjectHideFlags: 0
@@ -1520,6 +1517,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1126079339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126079336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7e501c5a1a5194c9bdb8e2cf10a716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerController: {fileID: 1126079340}
+  Players:
+  - {fileID: 2832450769281112467, guid: 0190274075c404a4095b2a00fc32c9f5, type: 3}
+  - {fileID: 645356605610110348, guid: 184f1f557c6777141bcd185ef2ba359a, type: 3}
+  - {fileID: 331219956414138712, guid: 23d623d873e4a4043b0598eb79637cb6, type: 3}
+  - {fileID: 2274334788017788331, guid: e2f7fe544b6d74b45b55b599dca77f1e, type: 3}
+  - {fileID: 3866022827189742412, guid: 92c96cb2737a938479e528daa2f1257d, type: 3}
+  _initializedDesiredObject: {fileID: 0}
+--- !u!114 &1126079340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126079336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d26c2317bdafe4cb1aa314a1789a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDetector: {fileID: 1126079339}
+  PlayerMovementBehaviour: {fileID: 1126079337}
+  _currentPlayer: {fileID: 0}
 --- !u!850595691 &1200776841
 LightingSettings:
   m_ObjectHideFlags: 0
