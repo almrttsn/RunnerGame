@@ -9,6 +9,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private PlayerController _playerController;
 
+    private Vector3 _sidewayValue;
+
     private bool _isInitialized;
 
     public void Initialize(PlayerController playerController)
