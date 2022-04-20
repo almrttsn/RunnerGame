@@ -742,6 +742,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ceb0a3ed2cb53a94fa21843cc958c52b, type: 2}
   - {fileID: 2100000, guid: 169a1b8f06c17c84e8de491f2bfef986, type: 2}
   - {fileID: 2100000, guid: 3930fc89a28b29746bde6a2389a513e0, type: 2}
+  _particles:
+  - {fileID: 6919028139075172858, guid: 8e16356a956ce874982eaee4617da081, type: 3}
+  - {fileID: 213965269284260639, guid: 1e73bef587f93c44c936f76d3f0f9251, type: 3}
+  - {fileID: 2519029632957920581, guid: c1af6fd7f4dccfc4790a4df43011e215, type: 3}
 --- !u!65 &7439518445856691668
 BoxCollider:
   m_ObjectHideFlags: 0

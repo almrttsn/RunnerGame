@@ -10,6 +10,7 @@ public class PlayerEffectBehaviour : MonoBehaviour
     private int _desiredSkyboxNumber;
 
     [SerializeField] List<Material> _skyboxMaterials;
+    [SerializeField] List<ParticleSystem> _particles;
 
     public void Initialize(PlayerController playerController)
     {
@@ -19,6 +20,16 @@ public class PlayerEffectBehaviour : MonoBehaviour
     public void ChangeSkybox(int _desiredSkyboxNumber)
     {
         RenderSettings.skybox = _skyboxMaterials[_desiredSkyboxNumber];
+    }
+
+    public void CollectLuckParticle()
+    {
+        _particles[0].Play();
+    }
+
+    public void CollectDoomParticle()
+    {
+        _particles[1].Play();
     }
 
 }

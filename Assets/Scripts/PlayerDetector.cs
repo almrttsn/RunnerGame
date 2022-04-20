@@ -23,16 +23,14 @@ public class PlayerDetector : MonoBehaviour
             _count++;
             ChangeMode();
             Debug.Log(_count);
-            Destroy(other.gameObject);
-            return;
+            _playerController.PlayerEffectBehaviour.CollectLuckParticle();
         }
         if (other.tag == "Doom" && this.tag == "Player")
         {
             _count--;
             ChangeMode();
             Debug.Log(_count);
-            Destroy(other.gameObject);
-            return;
+            _playerController.PlayerEffectBehaviour.CollectDoomParticle();
         }
     }
     private void ChangeMode()
