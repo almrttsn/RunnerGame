@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 2, z: -10}
+  m_FollowOffset: {x: 0, y: 3.48, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -594,7 +594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6410837953184958022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 0, y: 3.48, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 611129128470078746}
@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 7393960502432324492}
   - component: {fileID: 6146032464946182082}
   - component: {fileID: 4126261460260365168}
+  - component: {fileID: 3806752301933639909}
   - component: {fileID: 7439518445856691668}
   m_Layer: 0
   m_Name: PlayerParent
@@ -664,7 +665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6841158020163405259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 354810547992526375}
@@ -690,6 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerDetector: {fileID: 6146032464946182082}
   PlayerMovementBehaviour: {fileID: 4126261460260365168}
+  PlayerEffectBehaviour: {fileID: 3806752301933639909}
 --- !u!114 &6146032464946182082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,8 +722,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1992416328182144488dd655fb5c910a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 2
   _sidewayForce: 10
+--- !u!114 &3806752301933639909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841158020163405259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf17bb74e868b841aae88e23b54c7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skyboxMaterials:
+  - {fileID: 2100000, guid: 617d9be015db68348a623b01ea51a8c5, type: 2}
+  - {fileID: 2100000, guid: 77715b8b6b248994891d3ccad1ad330b, type: 2}
+  - {fileID: 2100000, guid: ceb0a3ed2cb53a94fa21843cc958c52b, type: 2}
+  - {fileID: 2100000, guid: 169a1b8f06c17c84e8de491f2bfef986, type: 2}
+  - {fileID: 2100000, guid: 3930fc89a28b29746bde6a2389a513e0, type: 2}
 --- !u!65 &7439518445856691668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -733,5 +753,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 1, z: 0}
