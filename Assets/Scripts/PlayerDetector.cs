@@ -23,12 +23,16 @@ public class PlayerDetector : MonoBehaviour
             _count++;
             ChangeMode();
             Debug.Log(_count);
+            Destroy(other.gameObject);
+            return;
         }
         if (other.tag == "Doom" && this.tag == "Player")
         {
             _count--;
             ChangeMode();
             Debug.Log(_count);
+            Destroy(other.gameObject);
+            return;
         }
     }
     private void ChangeMode()

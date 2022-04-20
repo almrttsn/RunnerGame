@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6538845200153367993}
   - component: {fileID: 6334780863887944263}
   - component: {fileID: 8404914534454621567}
-  - component: {fileID: 7382346115816638841}
+  - component: {fileID: 1372499252500800521}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Luck
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c145324149039428b766cd89820c4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &7382346115816638841
+--- !u!54 &1372499252500800521
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
