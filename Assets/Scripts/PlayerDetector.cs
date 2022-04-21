@@ -24,6 +24,7 @@ public class PlayerDetector : MonoBehaviour
             ChangeMode();
             Debug.Log(_count);
             other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+            other.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
         if (other.tag == "Doom" && this.tag == "Player")
         {
@@ -31,6 +32,7 @@ public class PlayerDetector : MonoBehaviour
             ChangeMode();
             Debug.Log(_count);
             other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+            other.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
     }
     private void ChangeMode()
