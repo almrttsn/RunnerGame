@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class LevelBehaviour : MonoBehaviour
 {
-    [SerializeField] private PlayerController _playerController;
+    [SerializeField] private PlayerController _playerPrefab;
+    [SerializeField] private PlayerController _playerInLevel;
     public void Initialize()
     {
-        var player = Instantiate(_playerController);
-        player.Initialize();
+        //var player = Instantiate(_playerController);
+        //player.Initialize();
+
+        //_playerPrefab.Initialize();
+        _playerInLevel.Initialize();
+
     }
 }
