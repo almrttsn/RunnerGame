@@ -11,6 +11,4 @@ public class GameManager : MonoBehaviour
         var player = Instantiate(_startingPlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         player.Initialize();
     }
-
-
 }

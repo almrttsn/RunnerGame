@@ -21,15 +21,4 @@ public class PlayerEffectBehaviour : MonoBehaviour
     {
         RenderSettings.skybox = _skyboxMaterials[_desiredSkyboxNumber];
     }
-
-    public void CollectLuckParticle()
-    {
-        _particles[0].Play();
-    }
-
-    public void CollectDoomParticle()
-    {
-        _particles[1].Play();
-    }
-
 }

@@ -23,18 +23,20 @@ public class PlayerDetector : MonoBehaviour
             _count++;
             ChangeMode();
             Debug.Log(_count);
-            _playerController.PlayerEffectBehaviour.CollectLuckParticle();
+            other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
         }
         if (other.tag == "Doom" && this.tag == "Player")
         {
             _count--;
             ChangeMode();
             Debug.Log(_count);
-            _playerController.PlayerEffectBehaviour.CollectDoomParticle();
+            other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
         }
     }
     private void ChangeMode()
     {
+        _count = Mathf.Clamp(_count, -2, 2);
+
         foreach (var obj in _players)
         {
             obj.SetActive(false);
