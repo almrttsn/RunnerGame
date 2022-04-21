@@ -34,6 +34,10 @@ public class PlayerDetector : MonoBehaviour
             other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
+        if(other.tag == "Finish" && this.tag == "Player")
+        {
+            EvaluateScoreResult();
+        }
     }
     private void ChangeMode()
     {
@@ -72,6 +76,14 @@ public class PlayerDetector : MonoBehaviour
             _players[4].SetActive(true);
             _playerController.PlayerEffectBehaviour.ChangeSkybox(4);
 
+        }
+    }
+
+    public void EvaluateScoreResult()
+    {
+        if(_count < Mathf.Epsilon)
+        {
+            
         }
     }
 

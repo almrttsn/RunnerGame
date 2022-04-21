@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public PlayerMovementBehaviour PlayerMovementBehaviour;
     public PlayerEffectBehaviour PlayerEffectBehaviour;
 
-
     public void Initialize()
     {
         PlayerDetector.Initialize(this);
