@@ -83,7 +83,7 @@ public class PlayerDetector : MonoBehaviour
     {
         if(_count < Mathf.Epsilon)
         {
-            
+            _playerController._levelBehaviour._gameManager.RestartLevel();
         }
     }
 

@@ -12,13 +12,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _currentlyPlayingLevelBehaviour = Instantiate(_level);
-        _currentlyPlayingLevelBehaviour.Initialize();
+        _currentlyPlayingLevelBehaviour.Initialize(this);
 
     }
     public void RestartLevel()
     {
         Destroy(_currentlyPlayingLevelBehaviour.gameObject);
         _currentlyPlayingLevelBehaviour = Instantiate(_level);
-        _currentlyPlayingLevelBehaviour.Initialize();
+        _currentlyPlayingLevelBehaviour.Initialize(this);
     }
 }
