@@ -56,6 +56,7 @@ MonoBehaviour:
   PlayerDetector: {fileID: 585450318890702177}
   PlayerMovementBehaviour: {fileID: 7212397084707127763}
   PlayerEffectBehaviour: {fileID: 7602275236705966662}
+  _levelBehaviour: {fileID: 0}
 --- !u!114 &585450318890702177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1992416328182144488dd655fb5c910a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  _speed: 50
   _sidewayForce: 10
 --- !u!114 &7602275236705966662
 MonoBehaviour:
@@ -525,6 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerInLevel: {fileID: 4307807284450523439}
+  _gameManager: {fileID: 0}
 --- !u!1 &5407915669405228647
 GameObject:
   m_ObjectHideFlags: 0

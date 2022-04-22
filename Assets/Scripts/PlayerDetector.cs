@@ -37,6 +37,7 @@ public class PlayerDetector : MonoBehaviour
         if(other.tag == "Finish" && this.tag == "Player")
         {
             EvaluateScoreResult();
+            Debug.Log("End trigger is triggered");
         }
     }
     private void ChangeMode()
@@ -83,7 +84,15 @@ public class PlayerDetector : MonoBehaviour
     {
         if(_count < Mathf.Epsilon)
         {
-            _playerController._levelBehaviour._gameManager.RestartLevel();
+            Debug.Log("Mission Failure");
+            _playerController._levelBehaviour._gameManager.InGamePanel.EnableInGamePanel();
+            _playerController._levelBehaviour._gameManager.InGamePanel.EnableMissionFailurePanel();
+        }
+        else
+        {
+            Debug.Log("Mission Success");
+            _playerController._levelBehaviour._gameManager.InGamePanel.EnableInGamePanel();
+            _playerController._levelBehaviour._gameManager.InGamePanel.EnableMissionSuccessfulPanel();
         }
     }
 

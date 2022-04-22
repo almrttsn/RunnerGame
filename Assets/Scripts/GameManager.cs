@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
 
     private bool _lastScore;
 
+    public InGamePanel InGamePanel;
+
     private void Start()
     {
         _currentlyPlayingLevelBehaviour = Instantiate(_level);
         _currentlyPlayingLevelBehaviour.Initialize(this);
-
+        InGamePanel.Initialize(this);
     }
     public void RestartLevel()
     {

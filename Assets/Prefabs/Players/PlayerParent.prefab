@@ -692,6 +692,7 @@ MonoBehaviour:
   PlayerDetector: {fileID: 6146032464946182082}
   PlayerMovementBehaviour: {fileID: 4126261460260365168}
   PlayerEffectBehaviour: {fileID: 3806752301933639909}
+  _levelBehaviour: {fileID: 0}
 --- !u!114 &6146032464946182082
 MonoBehaviour:
   m_ObjectHideFlags: 0
