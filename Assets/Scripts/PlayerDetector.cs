@@ -85,13 +85,13 @@ public class PlayerDetector : MonoBehaviour
         if(_count < Mathf.Epsilon)
         {
             Debug.Log("Mission Failure");
-            _playerController._levelBehaviour._gameManager.InGamePanel.EnableInGamePanel();
+            _playerController._levelBehaviour._gameManager.InGamePanel.EnableShopPanel();
             _playerController._levelBehaviour._gameManager.InGamePanel.EnableMissionFailurePanel();
         }
         else
         {
             Debug.Log("Mission Success");
-            _playerController._levelBehaviour._gameManager.InGamePanel.EnableInGamePanel();
+            _playerController._levelBehaviour._gameManager.InGamePanel.EnableShopPanel();
             _playerController._levelBehaviour._gameManager.InGamePanel.EnableMissionSuccessfulPanel();
         }
     }

@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class InGamePanel : MonoBehaviour
 {
-    [SerializeField] List<TextMeshPro> texts;
-    [SerializeField] List<Button> buttons;
+    [SerializeField] private GameObject _shopPanel;
+    [SerializeField] private Button _restartButton;
+    [SerializeField] private Button _nextLevelButton;
+    [SerializeField] private Text _failureText;
+    [SerializeField] private Text _successfulText;
 
     private GameManager _gameManager;
 
@@ -15,29 +18,36 @@ public class InGamePanel : MonoBehaviour
     {
         _gameManager = gameManager;
         Debug.Log("In game panel script is active");
-        DisableInGamePanel();
+        _shopPanel = this.gameObject.transform.GetChild(0).gameObject;
+        DisableShopPanel();
     }
 
-    public void DisableInGamePanel()
+    public void DisableShopPanel()
     {
-        this.gameObject.SetActive(false);
+        _shopPanel.SetActive(false);
     }
 
-    public void EnableInGamePanel()
+    public void EnableShopPanel()
     {
-        this.gameObject.SetActive(true);
+        _shopPanel.SetActive(true);
     }
 
     public void EnableMissionFailurePanel()
     {
-        buttons[0].enabled = true;
-        //texts[0].enabled = true;
+        //_restartButton.enabled = true;
+        _shopPanel.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        //_failureText.enabled = true;
+        _shopPanel.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+
     }
 
     public void EnableMissionSuccessfulPanel()
     {
-        buttons[1].enabled = true;
-        //texts[1].enabled = true;
+        //_nextLevelButton.enabled = true;
+        _shopPanel.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        //_successfulText.enabled = true;
+        _shopPanel.gameObject.transform.GetChild(3).gameObject.SetActive(true);
+
     }
 
 
