@@ -156,7 +156,6 @@ MonoBehaviour:
   - {fileID: 7735492987129430129, guid: 59c9d5f5c3bdffc4d9c6d2513245ac62, type: 3}
   - {fileID: 7735492987129430129, guid: e9e64a28b6906524ca2b23435d8aab16, type: 3}
   - {fileID: 7735492987129430129, guid: e45a9593c986bad4cb689dd87a3d0bbd, type: 3}
-  _level: {fileID: 7735492987129430129, guid: 59c9d5f5c3bdffc4d9c6d2513245ac62, type: 3}
   InGamePanel: {fileID: 1797335565}
 --- !u!4 &126396875
 Transform:
@@ -388,7 +387,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 426256668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 126396874}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &426256668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,7 +1005,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1482368955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 126396874}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1482368955
 MonoBehaviour:
   m_ObjectHideFlags: 0
