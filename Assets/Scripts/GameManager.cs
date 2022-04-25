@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         Destroy(_currentlyPlayingLevelBehaviour.gameObject);
-        _currentlyPlayingLevelBehaviour = Instantiate(_currentlyPlayingLevelBehaviour);
+        _currentlyPlayingLevelBehaviour = Instantiate(_levels[0]);
         _currentlyPlayingLevelBehaviour.Initialize(this);
         InGamePanel.DisableShopPanel();
     }
