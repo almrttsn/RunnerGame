@@ -156,6 +156,8 @@ MonoBehaviour:
   - {fileID: 7735492987129430129, guid: 59c9d5f5c3bdffc4d9c6d2513245ac62, type: 3}
   - {fileID: 7735492987129430129, guid: e9e64a28b6906524ca2b23435d8aab16, type: 3}
   - {fileID: 7735492987129430129, guid: e45a9593c986bad4cb689dd87a3d0bbd, type: 3}
+  _currentlyPlayingLevelBehaviour: {fileID: 7735492987129430129, guid: 59c9d5f5c3bdffc4d9c6d2513245ac62,
+    type: 3}
   InGamePanel: {fileID: 1797335565}
 --- !u!4 &126396875
 Transform:
