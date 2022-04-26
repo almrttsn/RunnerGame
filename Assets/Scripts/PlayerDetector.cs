@@ -82,7 +82,7 @@ public class PlayerDetector : MonoBehaviour
 
     public void EvaluateScoreResult()
     {
-        if(_count < Mathf.Epsilon)
+        if(_count < 1)
         {
             Debug.Log("Mission Failure");
             _playerController._levelBehaviour._gameManager.InGamePanel.EnableShopPanel();
