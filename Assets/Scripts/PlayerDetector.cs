@@ -13,11 +13,27 @@ public class PlayerDetector : MonoBehaviour
     [SerializeField] private List<GameObject> _players;
     [SerializeField] private float _happinessAmountFactor;
 
-    [SerializeField] Image HappinesBar;
+    [SerializeField] Image HappinessBar;
 
     public void Initialize(PlayerController playerController)
     {
         _playerController = playerController;
+    }
+
+    private void Update()
+    {
+        if(HappinessBar.fillAmount < 0.33)
+        {
+            HappinessBar.color = Color.red;
+        }
+        else if(HappinessBar.fillAmount > 0.33 && HappinessBar.fillAmount < 0.66)
+        {
+            HappinessBar.color = Color.yellow;
+        }
+        else if(HappinessBar.fillAmount > 0.66)
+        {
+            HappinessBar.color = Color.green;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,8 +45,7 @@ public class PlayerDetector : MonoBehaviour
             Debug.Log(_count);
             other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            var _currentFillAmount = HappinesBar.fillAmount;
-            HappinesBar.fillAmount = _currentFillAmount + (HappinesBar.fillAmount * _happinessAmountFactor / 10);
+            HappinessBar.fillAmount += _happinessAmountFactor / 10;
         }
         if (other.tag == "Doom" && this.tag == "Player")
         {
@@ -39,10 +54,9 @@ public class PlayerDetector : MonoBehaviour
             Debug.Log(_count);
             other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            var _currentFillAmount = HappinesBar.fillAmount;
-            HappinesBar.fillAmount = _currentFillAmount - (HappinesBar.fillAmount * _happinessAmountFactor / 10);
+            HappinessBar.fillAmount -= _happinessAmountFactor / 10;
         }
-        if(other.tag == "Finish" && this.tag == "Player")
+        if (other.tag == "Finish" && this.tag == "Player")
         {
             EvaluateScoreResult();
             Debug.Log("End trigger is triggered");

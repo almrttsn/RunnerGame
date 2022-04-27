@@ -56,9 +56,9 @@ namespace CodeMonkey.HealthSystemCM {
         /// <summary>
         /// Clean up events when this Game Object is destroyed
         /// </summary>
-        private void OnDestroy() {
-            healthSystem.OnHealthChanged -= HealthSystem_OnHealthChanged;
-        }
+        //private void OnDestroy() {
+        //    healthSystem.OnHealthChanged -= HealthSystem_OnHealthChanged;
+        //}
 
     }
 

@@ -77,7 +77,7 @@ MonoBehaviour:
   - {fileID: 5519589479556027809}
   - {fileID: 7432470580798645665}
   _happinessAmountFactor: 2.5
-  HappinesBar: {fileID: 5225406828745919128}
+  HappinessBar: {fileID: 5225406828745919128}
 --- !u!114 &7212397084707127763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.5
+  m_FillAmount: 0.65
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
