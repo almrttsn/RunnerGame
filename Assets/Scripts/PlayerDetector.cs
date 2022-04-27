@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDetector : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class PlayerDetector : MonoBehaviour
     private int _count;
 
     [SerializeField] private List<GameObject> _players;
+    [SerializeField] private float _happinessAmountFactor;
+
+    [SerializeField] Image HappinesBar;
 
     public void Initialize(PlayerController playerController)
     {
@@ -25,6 +29,8 @@ public class PlayerDetector : MonoBehaviour
             Debug.Log(_count);
             other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            var _currentFillAmount = HappinesBar.fillAmount;
+            HappinesBar.fillAmount = _currentFillAmount + (HappinesBar.fillAmount * _happinessAmountFactor / 10);
         }
         if (other.tag == "Doom" && this.tag == "Player")
         {
@@ -33,6 +39,8 @@ public class PlayerDetector : MonoBehaviour
             Debug.Log(_count);
             other.gameObject.GetComponentInChildren<ParticleSystem>().Play();
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            var _currentFillAmount = HappinesBar.fillAmount;
+            HappinesBar.fillAmount = _currentFillAmount - (HappinesBar.fillAmount * _happinessAmountFactor / 10);
         }
         if(other.tag == "Finish" && this.tag == "Player")
         {

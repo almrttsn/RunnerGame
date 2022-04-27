@@ -76,6 +76,8 @@ MonoBehaviour:
   - {fileID: 715413970293968336}
   - {fileID: 5519589479556027809}
   - {fileID: 7432470580798645665}
+  _happinessAmountFactor: 2.5
+  HappinesBar: {fileID: 5225406828745919128}
 --- !u!114 &7212397084707127763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 5}
+  m_AnchoredPosition: {x: 0, y: 4}
   m_SizeDelta: {x: 40, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5225406827904435248
@@ -699,7 +701,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.3
+  m_FillAmount: 0.5
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
