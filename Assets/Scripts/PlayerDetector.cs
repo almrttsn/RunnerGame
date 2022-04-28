@@ -107,14 +107,14 @@ public class PlayerDetector : MonoBehaviour
         if(_count < 1)
         {
             Debug.Log("Mission Failure");
-            _playerController._levelBehaviour._gameManager.InGamePanel.EnableShopPanel();
-            _playerController._levelBehaviour._gameManager.InGamePanel.EnableMissionFailurePanel();
+            _playerController.LevelBehaviour._gameManager.InGamePanel.EnableShopPanel();
+            _playerController.LevelBehaviour._gameManager.InGamePanel.EnableMissionFailurePanel();
         }
         else
         {
             Debug.Log("Mission Success");
-            _playerController._levelBehaviour._gameManager.InGamePanel.EnableShopPanel();
-            _playerController._levelBehaviour._gameManager.InGamePanel.EnableMissionSuccessfulPanel();
+            _playerController.LevelBehaviour._gameManager.InGamePanel.EnableShopPanel();
+            _playerController.LevelBehaviour._gameManager.InGamePanel.EnableMissionSuccessfulPanel();
         }
     }
 
