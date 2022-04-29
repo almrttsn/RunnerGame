@@ -7,19 +7,30 @@ public class PlayerAnimationBehaviour : MonoBehaviour
 {
     [SerializeField] Animator _playerAnimator;
 
+    private PlayerController _playerController;
 
+    public bool _isPlaying;
+    
     public void SetRunningAnimation()
     {
-        _playerAnimator.SetBool("Run", true);
+        if(_isPlaying == true)
+        {
+            Debug.Log("running");
+            _playerAnimator.SetBool("Run", true);
+        }
     }
 
     public void SetFallingAnimation()
     {
-        _playerAnimator.SetBool("Fall", true);
+        if(_isPlaying == false)
+        {
+            Debug.Log("falling");
+            _playerAnimator.SetBool("Fall", true);
+        }        
     }
 
     public void Initialize(PlayerController playerController)
     {
-
+        _playerController = playerController;
     }
 }

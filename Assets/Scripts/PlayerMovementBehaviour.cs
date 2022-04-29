@@ -17,6 +17,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
     {
         _playerController = playerController;
         _isInitialized = true;
+        _playerController.PlayerAnimationBehaviour._isPlaying = true;
         _playerController.PlayerAnimationBehaviour.SetRunningAnimation();
     }
     public void Update()

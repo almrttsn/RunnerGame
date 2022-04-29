@@ -6,11 +6,7 @@ using UnityEngine.UI;
 
 public class InGamePanel : MonoBehaviour
 {
-    [SerializeField] private GameObject _shopPanel;
-    [SerializeField] private Button _restartButton;
-    [SerializeField] private Button _nextLevelButton;
-    [SerializeField] private Text _failureText;
-    [SerializeField] private Text _successfulText;
+    [SerializeField] private GameObject _shopPanel;    
 
     private GameManager _gameManager;
 
@@ -53,6 +49,7 @@ public class InGamePanel : MonoBehaviour
 
     public void EnableGameOverPanel()
     {
-        Debug.Log("Game Over");
+        EnableShopPanel();
+        _shopPanel.gameObject.transform.GetChild(2).gameObject.SetActive(true);
     }
 }

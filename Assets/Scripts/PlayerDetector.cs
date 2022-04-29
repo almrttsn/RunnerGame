@@ -60,6 +60,9 @@ public class PlayerDetector : MonoBehaviour
         {
             HappinessBar.fillAmount = 0;
             _playerController.LevelBehaviour._gameManager.InGamePanel.EnableGameOverPanel();
+            _playerController.PlayerAnimationBehaviour._isPlaying = false;
+            _playerController.PlayerAnimationBehaviour.SetFallingAnimation();
+            StartCoroutine(RestartingLevelProcess());
         }
         if (other.tag == "Finish" && this.tag == "Player")
         {
@@ -121,6 +124,12 @@ public class PlayerDetector : MonoBehaviour
             _playerController.LevelBehaviour._gameManager.InGamePanel.EnableShopPanel();
             _playerController.LevelBehaviour._gameManager.InGamePanel.EnableMissionSuccessfulPanel();
         }
+    }
+
+    public IEnumerator RestartingLevelProcess()
+    {
+        yield return new WaitForSeconds(2f);
+        _playerController.LevelBehaviour._gameManager.RestartLevel();
     }
 
 
