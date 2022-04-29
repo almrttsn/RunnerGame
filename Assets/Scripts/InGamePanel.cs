@@ -52,4 +52,9 @@ public class InGamePanel : MonoBehaviour
         EnableShopPanel();
         _shopPanel.gameObject.transform.GetChild(2).gameObject.SetActive(true);
     }
+
+    public void DisableGameOverPanel()
+    {
+        _shopPanel.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+    }
 }

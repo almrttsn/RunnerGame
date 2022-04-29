@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         _currentlyPlayingLevelBehaviour.Initialize(this);
         InGamePanel.DisableShopPanel();
         InGamePanel.DisableMissionFailurePanel();
+        InGamePanel.DisableGameOverPanel();
     }
 
     public void LoadNextLevel()

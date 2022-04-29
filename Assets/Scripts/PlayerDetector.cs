@@ -12,6 +12,8 @@ public class PlayerDetector : MonoBehaviour
 
     [SerializeField] private List<GameObject> _players;
     [SerializeField] private float _happinessAmountFactor;
+    [SerializeField] private GameObject _endTrigger;
+    [SerializeField] private GameObject _player;
 
     [SerializeField] Image HappinessBar;
 
@@ -123,6 +125,10 @@ public class PlayerDetector : MonoBehaviour
             Debug.Log("Mission Success");
             _playerController.LevelBehaviour._gameManager.InGamePanel.EnableShopPanel();
             _playerController.LevelBehaviour._gameManager.InGamePanel.EnableMissionSuccessfulPanel();
+            _player.transform.rotation = Quaternion.Lerp(_player.transform.rotation, Quaternion.Euler(0, 180, 0), 1f);
+            _playerController.PlayerAnimationBehaviour._isWon = true;
+            _playerController.PlayerAnimationBehaviour.SetWinAnimation();
+            _endTrigger.GetComponentInChildren<ParticleSystem>().Play();
         }
     }
 

@@ -10,7 +10,13 @@ public class PlayerAnimationBehaviour : MonoBehaviour
     private PlayerController _playerController;
 
     public bool _isPlaying;
-    
+    public bool _isWon;
+
+    public void Initialize(PlayerController playerController)
+    {
+        _playerController = playerController;
+    }
+
     public void SetRunningAnimation()
     {
         if(_isPlaying == true)
@@ -29,8 +35,13 @@ public class PlayerAnimationBehaviour : MonoBehaviour
         }        
     }
 
-    public void Initialize(PlayerController playerController)
+    public void SetWinAnimation()
     {
-        _playerController = playerController;
+        if (_isWon == true)
+        {
+            Debug.Log("won");
+            _playerAnimator.SetBool("Dance", true);
+        }
     }
+    
 }
