@@ -73,30 +73,30 @@ public class PlayerDetector : MonoBehaviour
 
         if (_count == -2)
         {            
-            _players[0].SetActive(true);
+            //_players[0].SetActive(true);
             _playerController.PlayerEffectBehaviour.ChangeSkybox(0);
         }
         else if( _count == -1)
         {
-            _players[1].SetActive(true);
+            //_players[1].SetActive(true);
             _playerController.PlayerEffectBehaviour.ChangeSkybox(1);
 
         }
         else if (_count == 0)
         {
-            _players[2].SetActive(true);
+            //_players[2].SetActive(true);
             _playerController.PlayerEffectBehaviour.ChangeSkybox(2);
 
         }
         else if (_count == 1)
         {
-            _players[3].SetActive(true);
+            //_players[3].SetActive(true);
             _playerController.PlayerEffectBehaviour.ChangeSkybox(3);
 
         }
         else if (_count == 2)
         {
-            _players[4].SetActive(true);
+            //_players[4].SetActive(true);
             _playerController.PlayerEffectBehaviour.ChangeSkybox(4);
 
         }
