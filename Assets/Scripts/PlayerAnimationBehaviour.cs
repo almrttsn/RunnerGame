@@ -13,6 +13,11 @@ public class PlayerAnimationBehaviour : MonoBehaviour
         _playerAnimator.SetBool("Run", true);
     }
 
+    public void SetFallingAnimation()
+    {
+        _playerAnimator.SetBool("Fall", true);
+    }
+
     public void Initialize(PlayerController playerController)
     {
 

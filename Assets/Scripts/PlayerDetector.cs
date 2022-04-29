@@ -56,6 +56,11 @@ public class PlayerDetector : MonoBehaviour
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
             HappinessBar.fillAmount -= _happinessAmountFactor / 10;
         }
+        if (other.tag == "Wall" && this.tag == "Player")
+        {
+            HappinessBar.fillAmount = 0;
+            _playerController.LevelBehaviour._gameManager.InGamePanel.EnableGameOverPanel();
+        }
         if (other.tag == "Finish" && this.tag == "Player")
         {
             EvaluateScoreResult();

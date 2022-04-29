@@ -50,4 +50,9 @@ public class InGamePanel : MonoBehaviour
     {
         _shopPanel.gameObject.transform.GetChild(1).gameObject.SetActive(false);
     }
+
+    public void EnableGameOverPanel()
+    {
+        Debug.Log("Game Over");
+    }
 }
